@@ -1,0 +1,113 @@
+:root {
+    --bg: #221826;
+    --title: #ffb44a;
+    --text: #C78283;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+  }
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    font-size: 22px;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: 100vh;
+}
+
+h1 {
+    color: var(--title);
+}
+
+h2 {
+    color: var(--title);
+}
+
+h3 {
+    color: var(--title);
+}
+
+.first {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-info {
+    width: 80%;
+}
+
+.curriculum {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.no-bullet {
+    list-style-type: none;
+}
+
+.bullet {
+    list-style-type: disc;
+    margin-left: 1rem;
+}
+
+.skills,
+.education,
+.experience,
+.links {
+    width: 100%;
+    max-width: 880px;
+}
+
+.date-info {
+    color: var(--text);
+    font-weight: normal;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+a {
+    text-decoration: none;
+    color: var(--subtitle);
+}
+
+a:hover {
+    color: var(--bg);
+    background-color: var(--subtitle);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+    .first {
+    flex: 0 0 45%;
+      margin: 1.5rem auto;
+    }
+  }
+
+@media (min-width: 1080px) {
+    .curriculum {
+        margin-top: 10%;
+    }
+  }
